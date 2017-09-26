@@ -9,13 +9,22 @@ namespace Wpf_Shaders
         {
             InitializeComponent();
         }
-        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var window = new SomeWindow();
             window.Owner = this;
-
             window.ShowDialog();
+        }
+
+        private void OnEffectButton_Click(object sender, RoutedEventArgs e)
+        {
+            UseDisabledEffect = true;
+        }
+
+        private void OffEffectButton_Click(object sender, RoutedEventArgs e)
+        {
+            UseDisabledEffect = false;
         }
     }
 }
